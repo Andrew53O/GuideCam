@@ -136,9 +136,10 @@ fun CameraScreen(
                     cameraController.captureImage(
                         onImageSaved = { uri ->
                             isCapturing = false
+                            // Show a more informative toast with the save location
                             Toast.makeText(
                                 context,
-                                "Image saved",
+                                "Image saved to Pictures/GuideCam",
                                 Toast.LENGTH_SHORT
                             ).show()
                         },
